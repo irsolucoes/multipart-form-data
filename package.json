@@ -1,6 +1,6 @@
 {
   "name": "multipart-form-data",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Build and serialize 'multipart/form-data' requests",
   "main": "src/multipart-form-data.js",
   "scripts": {
