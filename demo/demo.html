@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Sending forms with pure AJAX &ndash; MDN</title>
+  </head>
+  <body>
+    <h1>Sending forms with pure AJAX</h1>
+
+    <h2>
+      Heavily inspired by
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files"
+        >Using_XMLHttpRequest#Submitting_forms_and_uploading_files (from MDN)</a
+      >
+    </h2>
+
+    <h3>Enctype: multipart/form-data</h3>
+
+    <form onsubmit="onSubmit(event, this)">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          First name: <input type="text" name="firstname" value="John" /><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" checked />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          What do you prefer:
+          <select name="preference">
+            <option>Books</option>
+            <option selected>Cinema</option>
+            <option>TV</option>
+          </select>
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike"
+            checked
+          />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car"
+            checked
+          />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          Describe yourself:<br />
+          <textarea name="description" cols="50" rows="8">
+Descricao legal</textarea
+          >
+        </p>
+        <p>
+          Post your photo:
+          <input type="file" name="photo" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+
+    <script type="module">
+      'use strict';
+
+      import { submitForm } from './demo.js';
+
+      window.onSubmit = function onSubmit(e, formElement) {
+        console.log('onSubmit');
+        console.log(e);
+        console.log(formElement);
+        e.preventDefault();
+        e.stopPropagation();
+
+        submitForm(formElement);
+
+        return false;
+      };
+    </script>
+  </body>
+</html>

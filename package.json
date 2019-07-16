@@ -1,0 +1,30 @@
+{
+  "name": "multipart-form-data",
+  "version": "0.0.1",
+  "description": "Build and serialize 'multipart/form-data' requests",
+  "main": "src/multipart-form-data.js",
+  "scripts": {
+    "serve": "http-server .",
+    "lint": "eslint '{src,demo}/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assisrafael/multipart-form-data.git"
+  },
+  "keywords": [
+    "multipart",
+    "FormData",
+    "file",
+    "upload"
+  ],
+  "author": "Igor Rafael <igor.rafael@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assisrafael/multipart-form-data/issues"
+  },
+  "homepage": "https://github.com/assisrafael/multipart-form-data#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
