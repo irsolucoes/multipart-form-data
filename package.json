@@ -1,5 +1,5 @@
 {
-  "name": "@assisrafael/multipart-form-data",
+  "name": "@irsolucoes/multipart-form-data",
   "version": "0.1.1",
   "description": "Build and serialize 'multipart/form-data' requests",
   "main": "src/multipart-form-data.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/assisrafael/multipart-form-data.git"
+    "url": "git+https://github.com/irsolucoes/multipart-form-data.git"
   },
   "keywords": [
     "multipart",
@@ -21,9 +21,9 @@
   "author": "Igor Rafael <igor.rafael@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/assisrafael/multipart-form-data/issues"
+    "url": "https://github.com/irsolucoes/multipart-form-data/issues"
   },
-  "homepage": "https://github.com/assisrafael/multipart-form-data#readme",
+  "homepage": "https://github.com/irsolucoes/multipart-form-data#readme",
   "devDependencies": {
     "http-server": "^0.11.1"
   }
