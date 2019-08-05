@@ -28,16 +28,9 @@ export function multipartFormDataFactory() {
     toBinary() {
       const dataToSend = `--${sBoundary}${LB}${segments.join(
         `--${sBoundary}${LB}`
-      )}--${sBoundary}--${LB}`;
+      )}--${sBoundary}--${LB}`.normalize();
 
-      const nBytes = dataToSend.length,
-        ui8Data = new Uint8Array(nBytes);
-
-      for (let nIdx = 0; nIdx < nBytes; nIdx++) {
-        ui8Data[nIdx] = dataToSend.charCodeAt(nIdx) & 0xff;
-      }
-
-      return ui8Data;
+      return new TextEncoder().encode(dataToSend);
     }
   };
 }
