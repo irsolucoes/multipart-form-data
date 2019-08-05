@@ -13,6 +13,7 @@ app.use('/src', express.static('./src'));
 
 app.post('/api/multipart', (req, res) => {
   console.log(req.body);
+  console.log(req.files);
   res.send(req.body);
 });
 
